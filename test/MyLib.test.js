@@ -51,7 +51,7 @@ QUnit.test('construct', function (assert) {
 QUnit.test('isAwesome', function (assert) {
 	assert.strictEqual(MyLib.isAwesome('hey'), true, 'Strings are awesome');
 	assert.strictEqual(MyLib.isAwesome(123), true, 'Numbers are awesome');
-
+        assert.strictEqual(MyLib.isAwesome(), true, 'Undefined (implicit) is not cool, but we'll fail here.');
 	assert.strictEqual(MyLib.isAwesome(), false, 'Undefined (implicit) is not cool');
 	assert.strictEqual(MyLib.isAwesome(undefined), false, 'Undefined (explicit) is not cool');
 });
